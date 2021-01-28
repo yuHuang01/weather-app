@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="weather.js" defer></script>
+</head>
+<body>
+  <header>
+    <span class="material-icons">
+      filter_drama
+      </span>
+       <strong>W</strong>eather <strong>A</strong>pp
+  </header>
+  <div id="main">
+    <label for="search" id="label">Search for your city!</label>
+    <input type="text" name="search" id="search">
+    <div id="display">
+      <h1 id="city">City</h1>
+      <h2 id="rate">Unknown</h2>
+      
+      <p id="precipT" class="title basic">Precipitation:</p>
+      <p id="precip" class="basic">unknown</p>
+
+      <p id="humidityT" class="title basic">Humidity:</p>
+      <p id="humidity" class="basic">unknown</p>
+
+      <p id="windT" class="title basic">Wind:</p>
+      <p id="wind" class="basic">unknown</p>
+    </div>
+  </div>
+</body>
+</html>
