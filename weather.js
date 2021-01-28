@@ -13,12 +13,12 @@ const appParts = {
 const weatherFuncs = {
   getDatas: async (cityName) => {
     try {
-      const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=fb9fb028085214974b975cb60833cb56`, { mode: 'cors' });
+      const response = await fetch(`adhttp://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=fb9fb028085214974b975cb60833cb56`, { mode: 'cors' });
       const data = await response.json();
 
       return data;
     } catch (err) {
-      appParts.err.textContent = err.message;
+      return err;
     }
   },
   diplayDatas: (promise) => {
@@ -37,6 +37,8 @@ const weatherFuncs = {
       appParts.descrip.textContent = des;
       appParts.humi.textContent = `${humi}%`;
       appParts.wind.textContent = `${windSpeed} km/h`;
+    }).catch((err) => {
+      appParts.err.textContent = err;
     });
   },
 };
